@@ -7,11 +7,11 @@ import { CiMenuFries } from "react-icons/ci";
 
 const links = [
     {
-        name: 'home',
+        name: 'Inicio',
         path: '/',
     },
     {
-        name: 'services',
+        name: 'Servicio',
         path: '/services',
     },
     {
@@ -19,11 +19,11 @@ const links = [
         path: '/resume',
     },
     {
-        name: 'work',
+        name: 'Trabajo',
         path: '/work',
     },
     {
-        name: 'contact',
+        name: 'Contacto',
         path: '/contact',
     },
 ]
