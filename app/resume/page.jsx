@@ -9,7 +9,7 @@ const about = {
   description: 'Me destaco en la creación de experiencias digitales elegantes dominando varios lenguajes y tecnologías de programación.',
   info: [
     {
-      fieldName: 'Name',
+      fieldName: 'Nombre',
       fieldValue: 'Alexis Lerch'
     },
     {
@@ -26,7 +26,7 @@ const about = {
     },
     {
       fieldName: 'Freelance',
-      fieldValue: 'Available'
+      fieldValue: 'Disponible'
     },
     {
       fieldName: 'Email',
