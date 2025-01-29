@@ -72,19 +72,24 @@ const education = {
   items: [
     {
       institution: "FreeCodeCamp Online course platform",
-      degree: "Full Stack Web Development",
+      degree: "Html 5 y Css",
+      duration: "2022"
+    },
+    {
+      institution: "FreeCodeCamp Online course platform",
+      degree: "JavaScript",
       duration: "2023"
     },
     {
       institution: "FreeCodeCamp Online course platform",
-      degree: "Full Stack Web Development",
-      duration: "2023"
+      degree: "Python",
+      duration: "2024"
     },
     {
-      institution: "FreeCodeCamp Online course platform",
-      degree: "Full Stack Web Development",
-      duration: "2023"
-    }
+      institution: "Autodidacta con tutoriales",
+      degree: "React.js, Next.js",
+      duration: "2024"
+    },
   ]
 }
 
@@ -143,9 +148,9 @@ const Resume = () => {
     className='min-h-[80vh] flex items-center justify-center py-12 xl:py-0'
     >
       <div className='container mx-auto'>
-        <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-[60px]'>
+        <Tabs defaultValue='education' className='flex flex-col xl:flex-row gap-[60px]'>
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">Experiencia</TabsTrigger>
+            {/* <TabsTrigger value="experience">Experiencia</TabsTrigger> */}
             <TabsTrigger value="education">Educacion</TabsTrigger>
             <TabsTrigger value="skills">Habilidades</TabsTrigger>
             <TabsTrigger value="about">Sobre mi</TabsTrigger>
@@ -155,7 +160,7 @@ const Resume = () => {
           <div className='min-h-[70vh] w-full'>
 
             {/* experiencia */}
-            <TabsContent value="experience" className="w-full">
+            {/* <TabsContent value="experience" className="w-full">
               <div className='flex flex-col gap-[30px] text-center xl:text-left'>
                 <h3 className='text-4xl font-bold'>
                   {experience.title}
@@ -170,7 +175,7 @@ const Resume = () => {
                         <span className='text-accent'>{item.duration}</span>
                         <h3 className='text-xl max-w-[260px] min-h-[60px] text-center lg:text-left'>{item.position}</h3>
                         <div className='flex items-center gap-3'>
-                          {/* dot */}
+                          
                           <span className='w-[6px] h-[6px] rounded-full bg-accent'></span>
                           <p className='text-white/60'>{item.company}</p>
                         </div>
@@ -179,7 +184,7 @@ const Resume = () => {
                   </ul>
                 </ScrollArea>
               </div>
-            </TabsContent>
+            </TabsContent> */}
 
             {/* educacion */}
             <TabsContent value="education" className="w-full">
