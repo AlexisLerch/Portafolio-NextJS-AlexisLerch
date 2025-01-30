@@ -19,14 +19,16 @@ const projects = [
     num: '01',
     category: 'frontend',
     title: 'project 1',
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reprehenderit tenetur.",
+    description: "Creando una pagina web con React JS responsiva de una IA ficticia.",
     stack: [
-      {name: 'Html 5'},
-      {name: 'Css 3'},
-      {name: 'Javascript'}],
-      image: '/assets1/work/thumb1.png',
-      live: 'https://github.com/AlexisLerch',
-      github: 'https://github.com/AlexisLerch',
+      {name: 'Javascript'},
+      {name: 'React.Js'},
+      {name: 'HTML'},
+      {name: 'CSS'},
+      {name: 'Tailwind.css'}],
+      image: '/assets1/work/thumb2.png',
+      live: 'https://reactjs-ix88ynbk7-alexislerchs-projects.vercel.app/',
+      github: 'https://github.com/AlexisLerch/website-reactjs',
   },
   {
     num: '02',
@@ -34,25 +36,44 @@ const projects = [
     title: 'project 2',
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reprehenderit tenetur.",
     stack: [
-      {name: 'Next.js'},
+      {name: 'Javascript'},
+      {name: 'React.Js'},
+      {name: 'HTML'},
+      {name: 'CSS'},
+      {name: 'Tailwind.css'}],
+      image: '/assets1/work/thumb1.png',
+      live: 'https://github.com/AlexisLerch/react-bank-app',
+      github: 'https://github.com/AlexisLerch/react-bank-app',
+  },
+  {
+    num: '04',
+    category: 'frontend',
+    title: 'project 4',
+    description: "Lorem ipsum dolor sit amet consecteturaaaaaaaaaaaaaaaaaaaLorem ipsum dolo  ",
+    stack: [
+      {name: 'Javascript'},
+      {name: 'React.js'},
       {name: 'Tailwind.css'},
-      {name: 'Node.js'}],
-      image: '/assets1/work/thumb2.png',
-      live: 'https://github.com/AlexisLerch',
-      github: 'https://github.com/AlexisLerch',
+      {name: 'HTML'},
+      {name: 'CSS'},],
+      image: '/assets1/work/thumb4.png',
+      live: 'https://portfolio-react-main-1nx3nwalg-alexislerchs-projects.vercel.app/',
+      github: 'https://github.com/AlexisLerch/portfolio-react',
   },
   {
     num: '03',
     category: 'frontend',
     title: 'project 3',
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reprehenderit tenetur.",
+    description: "Lorem ipsum dolor sit amet consecteturaaaaaaaaaaaaaaaaaaa ",
     stack: [
-      {name: 'React.js'},
+      {name: 'Javascript'},
+      {name: 'Next.js'},
       {name: 'Tailwind.css'},
-      {name: 'Javascript'}],
+      {name: 'HTML'},
+      {name: 'CSS'},],
       image: '/assets1/work/thumb3.png',
-      live: 'https://github.com/AlexisLerch',
-      github: 'https://github.com/AlexisLerch',
+      live: 'https://github.com/AlexisLerch/nextjs-portfolio',
+      github: 'https://github.com/AlexisLerch/nextjs-portfolio',
   },
 ]
 
@@ -71,7 +92,7 @@ const Work = () => {
       {delay: 2.4, duration: 0.4, ease: "easeIn"},}} 
     className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0">
       <div className="container mx-auto">
-      <h2 className="text-center pb-20 text-xl text-white/70">Esta seccion es solo de demostracion</h2>
+      {/* <h2 className="text-center pb-20 text-xl text-white/70">Esta seccion es solo de demostracion</h2> */}
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
@@ -113,7 +134,7 @@ const Work = () => {
                   </TooltipProvider>
                 </Link>
                 {/* github projects button */}
-                <Link href={project.live} target="_blank">
+                <Link href={project.github} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -128,7 +149,7 @@ const Work = () => {
               </div>
             </div>
           </div>
-          <div className="w-full xl:w-[50%]">
+          <div className="w-full xl:w-[59%]">
             <Swiper spaceBetween={30} slidesPerView={1} className="xl:h-[520px] mb-12"
             onSlideChange={handleSlideChange}
             >
