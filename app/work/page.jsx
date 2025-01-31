@@ -19,7 +19,7 @@ const projects = [
     num: '01',
     category: 'frontend',
     title: 'project 1',
-    description: "Creando una pagina web con React JS responsiva de una IA ficticia.",
+    description: "Pagina web creada con React.JS responsiva de una IA ficticia.",
     stack: [
       {name: 'Javascript'},
       {name: 'React.Js'},
@@ -34,7 +34,7 @@ const projects = [
     num: '02',
     category: 'fullstack',
     title: 'project 2',
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reprehenderit tenetur.",
+    description: "Pagina web creada con React.JS responsiva de un banco ficticio.",
     stack: [
       {name: 'Javascript'},
       {name: 'React.Js'},
@@ -49,7 +49,7 @@ const projects = [
     num: '04',
     category: 'frontend',
     title: 'project 4',
-    description: "Lorem ipsum dolor sit amet consecteturaaaaaaaaaaaaaaaaaaaLorem ipsum dolo  ",
+    description: "Pagina web creada con React.JS responsiva de un portafolio personal ficticio.",
     stack: [
       {name: 'Javascript'},
       {name: 'React.js'},
@@ -64,7 +64,7 @@ const projects = [
     num: '03',
     category: 'frontend',
     title: 'project 3',
-    description: "Lorem ipsum dolor sit amet consecteturaaaaaaaaaaaaaaaaaaa ",
+    description: "Pagina web creada con Next.JS responsiva de un portafolio personal ficticio.",
     stack: [
       {name: 'Javascript'},
       {name: 'Next.js'},

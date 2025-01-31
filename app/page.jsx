@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import { saveAs } from "file-saver";
+import { FaCopy } from "react-icons/fa";
 
 // componentes
 import Social from "@/components/Social";
@@ -22,12 +23,16 @@ const Home = () => {
             <p className="max-w-[500px] mb-9 text-white/80">Me destaco en la creación de experiencias digitales elegantes dominando varios lenguajes y tecnologías de programación.</p>
 
             {/* boton y social */}
+            <Button onClick={() => {navigator.clipboard.writeText('alexis.lerch123@gmail.com'); {alert("Email copiado!");}}} variant="outline" size="sm" className="mb-5 uppercase flex items-center gap-2">
+                  <span>alexis.lerch123@gmail.com</span>
+                    <FaCopy />
+                </Button>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a href="/assets1/AlexisLerch-cv.pdf" target='_blank' download='AlexisLerch-cv.pdf'>
-              <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
+              <Button variant="outline" size="sm" className="uppercase flex items-center gap-2">
                 <span>Descargar CV</span>
                 <FiDownload className="text-xl" />
-              </Button>
+                </Button>
               </a>
               <div className="mb-8 xl:mb-0">
                 <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500" />
