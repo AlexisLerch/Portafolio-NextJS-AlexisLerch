@@ -21,7 +21,7 @@ const projects = [
     title: 'project 1',
     description: "Pagina web creada con React.JS responsiva de una IA ficticia.",
     stack: [
-      {name: 'HTM CSS'},
+      {name: 'HTML CSS'},
       {name: 'React.Js'},
       {name: 'Tailwind'}
     ],
@@ -31,7 +31,7 @@ const projects = [
   },
   {
     num: '02',
-    category: 'fullstack',
+    category: 'frontend',
     title: 'project 2',
     description: "Pagina web creada con React.JS responsiva de un banco ficticio.",
     stack: [
@@ -71,6 +71,18 @@ const projects = [
       image: '/assets1/work/thumb3.png',
       live: 'https://github.com/AlexisLerch/nextjs-portfolio',
       github: 'https://github.com/AlexisLerch/nextjs-portfolio',
+  },
+  {
+    num: '05',
+    category: 'backend',
+    title: 'project 5',
+    description: "Menu con algunos ejercicion que fui haciendo con Python.",
+    stack: [
+      {name: 'Python'},
+    ],
+      image: '/assets1/work/thumb5.png',
+      live: 'https://github.com/AlexisLerch/Python/blob/main/menu.py',
+      github: 'https://github.com/AlexisLerch/Python/blob/main/menu.py',
   },
 ]
 

@@ -22,7 +22,7 @@ const info = [
   {
     icon: <FaMapMarkerAlt />,
     title: 'Direccion',
-    description: 'Code Corner, Tech Town 13579'
+    description: 'Brasil 355, Libertador San Martin, Entre Rios CP: 3103, Argentina'
   },
 ]
 
