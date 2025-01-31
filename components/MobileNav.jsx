@@ -11,16 +11,16 @@ const links = [
         path: '/',
     },
     {
-        name: 'servicio',
-        path: '/services',
+        name: 'proyectos',
+        path: '/work',
     },
     {
         name: 'resume',
         path: '/resume',
     },
     {
-        name: 'proyectos',
-        path: '/work',
+        name: 'servicio',
+        path: '/services',
     },
     {
         name: 'contacto',
@@ -55,7 +55,8 @@ const MobileNav = () => {
                         <Link href={link.path} key={index} className={`${link.path === pathname && "text-accent border-b-2 border-accent"} text-xl capitalize hover:text-accent transition-all`} >
                             {link.name}
                         </Link>
-                    </SheetClose>)  
+                    </SheetClose>
+                )  
                 })}
             </nav>
         </SheetContent>

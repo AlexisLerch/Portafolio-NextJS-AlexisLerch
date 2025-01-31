@@ -21,11 +21,10 @@ const projects = [
     title: 'project 1',
     description: "Pagina web creada con React.JS responsiva de una IA ficticia.",
     stack: [
-      {name: 'Javascript'},
+      {name: 'HTM CSS'},
       {name: 'React.Js'},
-      {name: 'HTML'},
-      {name: 'CSS'},
-      {name: 'Tailwind.css'}],
+      {name: 'Tailwind'}
+    ],
       image: '/assets1/work/thumb2.png',
       live: 'https://reactjs-ix88ynbk7-alexislerchs-projects.vercel.app/',
       github: 'https://github.com/AlexisLerch/website-reactjs',
@@ -36,41 +35,39 @@ const projects = [
     title: 'project 2',
     description: "Pagina web creada con React.JS responsiva de un banco ficticio.",
     stack: [
-      {name: 'Javascript'},
+      {name: 'HTML CSS'},
       {name: 'React.Js'},
-      {name: 'HTML'},
-      {name: 'CSS'},
-      {name: 'Tailwind.css'}],
+      {name: 'Tailwind'}
+    ],
       image: '/assets1/work/thumb1.png',
       live: 'https://github.com/AlexisLerch/react-bank-app',
       github: 'https://github.com/AlexisLerch/react-bank-app',
   },
   {
-    num: '04',
+    num: '03',
     category: 'frontend',
-    title: 'project 4',
+    title: 'project 3',
     description: "Pagina web creada con React.JS responsiva de un portafolio personal ficticio.",
     stack: [
-      {name: 'Javascript'},
+      {name: 'HTML CSS'},
       {name: 'React.js'},
-      {name: 'Tailwind.css'},
-      {name: 'HTML'},
-      {name: 'CSS'},],
+      {name: 'Tailwind'},
+    ],
       image: '/assets1/work/thumb4.png',
       live: 'https://portfolio-react-main-1nx3nwalg-alexislerchs-projects.vercel.app/',
       github: 'https://github.com/AlexisLerch/portfolio-react',
   },
   {
-    num: '03',
+    num: '04',
     category: 'frontend',
-    title: 'project 3',
+    title: 'project 4',
     description: "Pagina web creada con Next.JS responsiva de un portafolio personal ficticio.",
     stack: [
-      {name: 'Javascript'},
+      {name: 'HTML CSS'},
       {name: 'Next.js'},
-      {name: 'Tailwind.css'},
-      {name: 'HTML'},
-      {name: 'CSS'},],
+      {name: 'Tailwind'},
+
+    ],
       image: '/assets1/work/thumb3.png',
       live: 'https://github.com/AlexisLerch/nextjs-portfolio',
       github: 'https://github.com/AlexisLerch/nextjs-portfolio',
@@ -107,7 +104,7 @@ const Work = () => {
               {/* project description */}
               <p className="text-white/60">{project.description}</p>
               {/* stack */}
-              <ul className="flex gap-4">
+              <ul className="flex gap-2">
                 {project.stack.map((item, index) => {
                   return <li key={index} className="text-xl text-accent">
                     {item.name}
@@ -149,7 +146,7 @@ const Work = () => {
               </div>
             </div>
           </div>
-          <div className="w-full xl:w-[59%]">
+          <div className="w-full xl:w-[50%]">
             <Swiper spaceBetween={30} slidesPerView={1} className="xl:h-[520px] mb-12"
             onSlideChange={handleSlideChange}
             >

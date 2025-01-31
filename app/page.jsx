@@ -17,19 +17,21 @@ const Home = () => {
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
-          <div className="text-center xl:text-left order-2 xl:order-none">
+          <div className="text-center xl:text-left order-2 xl:order-none sm:item-center md:item-center">
             <span className="text-xl">Software Developer</span>
             <h1 className="h1">Hola soy <br /> <span className="text-accent">Alexis Lerch</span></h1>
             <p className="max-w-[500px] mb-9 text-white/80">Me destaco en la creación de experiencias digitales elegantes dominando varios lenguajes y tecnologías de programación.</p>
 
             {/* boton y social */}
-            <Button onClick={() => {navigator.clipboard.writeText('alexis.lerch123@gmail.com'); {alert("Email copiado!");}}} variant="outline" size="sm" className="mb-5 uppercase flex items-center gap-2">
+            <div className="flex flex-col xl:flex-row items-center gap-8">
+            <Button onClick={() => {navigator.clipboard.writeText('alexis.lerch123@gmail.com'); {alert("Email copiado!");}}} variant="outline" size="sm" className="mb-5 flex items-center gap-2">
                   <span>alexis.lerch123@gmail.com</span>
                     <FaCopy />
                 </Button>
+              </div>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a href="/assets1/AlexisLerch-cv.pdf" target='_blank' download='AlexisLerch-cv.pdf'>
-              <Button variant="outline" size="sm" className="uppercase flex items-center gap-2">
+              <Button variant="outline" size="sm" className="uppercase flex items-center gap-2 sm:items-center">
                 <span>Descargar CV</span>
                 <FiDownload className="text-xl" />
                 </Button>
