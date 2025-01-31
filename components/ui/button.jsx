@@ -5,13 +5,13 @@ import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-semibold ring-offset-white transition-colors",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-[10px] text-base font-semibold ring-offset-white transition-colors border border-color-white bg-black hover:bg-white hover:text-black text-base",
   {
     variants: {
       variant: {
-        default: "bg-accent text-primary hover:bg-accent-hover",
-        primary: "bg-primary text-white",
-        outline: "border border-accent bg-transparent text-accent hover:bg-accent hover:text-primary",
+        default: "bg-black text-white hover:bg-white ",
+        primary: "bg-black text-white",
+        outline: "border bg-black text-white hover:bg-white hover:text-primary ",
       },
       size: {
         default: "h-[44px] px-6",

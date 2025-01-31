@@ -19,7 +19,7 @@ const Home = () => {
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none sm:item-center md:item-center">
             <span className="text-xl">Software Developer</span>
-            <h1 className="h1">Hola soy <br /> <span className="text-accent">Alexis Lerch</span></h1>
+            <h1 className="h1 ">Hola soy <br /> <span className="text-white/45 ">Alexis Lerch</span></h1>
             <p className="max-w-[500px] mb-9 text-white/80">Me destaco en la creación de experiencias digitales elegantes dominando varios lenguajes y tecnologías de programación.</p>
 
             {/* boton y social */}
@@ -32,12 +32,12 @@ const Home = () => {
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a href="/assets1/AlexisLerch-cv.pdf" target='_blank' download='AlexisLerch-cv.pdf'>
               <Button variant="outline" size="sm" className="uppercase flex items-center gap-2 sm:items-center">
-                <span>Descargar CV</span>
-                <FiDownload className="text-xl" />
+                <span >Descargar CV</span>
+                <FiDownload className="text-xl " />
                 </Button>
               </a>
               <div className="mb-8 xl:mb-0">
-                <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500" />
+                <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-color-white rounded-[10px] flex justify-center items-center bg-black text-base hover:bg-white hover:text-black hover:border-[11px] hover:transition-all duration-500" />
               </div>
             </div>
           </div>

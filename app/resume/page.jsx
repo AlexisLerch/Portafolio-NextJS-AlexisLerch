@@ -137,6 +137,7 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@radix-ui/react-tooltip';
 import { ScrollArea } from '@radix-ui/react-scroll-area';
 import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
 
 const Resume = () => {
   return (
@@ -151,9 +152,9 @@ const Resume = () => {
         <Tabs defaultValue='education' className='flex flex-col xl:flex-row gap-[60px]'>
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             {/* <TabsTrigger value="experience">Experiencia</TabsTrigger> */}
-            <TabsTrigger value="education">Educacion</TabsTrigger>
-            <TabsTrigger value="skills">Habilidades</TabsTrigger>
-            <TabsTrigger value="about">Sobre mi</TabsTrigger>
+            <TabsTrigger className="rounded-[10px]" value="education">Educacion</TabsTrigger>
+            <TabsTrigger className="rounded-[10px]" value="skills">Habilidades</TabsTrigger>
+            <TabsTrigger className="rounded-[10px]" value="about">Sobre mi</TabsTrigger>
           </TabsList>
 
           {/* contenido */}
@@ -198,12 +199,12 @@ const Resume = () => {
                 <ScrollArea className='h-[400px]'>
                   <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px]'>
                     {education.items.map((item, index) => {
-                      return <li key={index} className='bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'>
-                        <span className='text-accent'>{item.duration}</span>
+                      return <li key={index} className='bg-[#232329] h-[184px] py-6 px-10 mb-2 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'>
+                        <span className='text-white border-b-2 border-black'>{item.duration}</span>
                         <h3 className='text-xl max-w-[260px] min-h-[60px] text-center lg:text-left'>{item.degree}</h3>
                         <div className='flex items-center gap-3'>
                           {/* dot */}
-                          <span className='w-[6px] h-[6px] rounded-full bg-accent'></span>
+                          <span className='w-[10px] h-[8px] rounded-full bg-black'></span>
                           <p className='text-white/60'>{item.institution}</p>
                         </div>
                       </li>
@@ -248,7 +249,7 @@ const Resume = () => {
                   {about.info.map((item, index) => {
                     return <li key={index} className='flex items-center justify-center xl:justify-start gap-4'>
                       <span className='text-white/60'>{item.fieldName}</span>
-                      <span className='text-xl'>{item.fieldValue}</span>
+                      <span className='xl:text-xl'>{item.fieldValue}</span>
                     </li>
                   })}
                 </ul>

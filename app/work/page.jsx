@@ -106,7 +106,7 @@ const Work = () => {
               {/* stack */}
               <ul className="flex gap-2">
                 {project.stack.map((item, index) => {
-                  return <li key={index} className="text-xl text-accent">
+                  return <li key={index} className="text-xl font-extrabold text-withe">
                     {item.name}
                     {/* sacar la ultima coma */}
                     {index !== project.stack.length - 1 && ","}
@@ -114,7 +114,7 @@ const Work = () => {
                 })}
               </ul>
               {/* border */}
-              <div className="border border-white/20"></div>
+              <div className=" border border-4 border-black"></div>
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live projects button */}
@@ -122,7 +122,7 @@ const Work = () => {
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-wrap text-3xl group-hover:text-accent" />
+                        <BsArrowUpRight className="text-wrap text-3xl group-hover:text-black" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>Live project</p>
@@ -135,7 +135,7 @@ const Work = () => {
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-wrap text-3xl group-hover:text-accent" />
+                        <BsGithub className="text-wrap text-3xl group-hover:text-black" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>github repository</p>
@@ -163,7 +163,7 @@ const Work = () => {
                   </SwiperSlide>);
               })}
               {/* slider buttons */}
-              <WorkSliderBtns containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none" btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all" />
+              <WorkSliderBtns containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none" btnStyles="bg-black rounded-[10px] hover:bg-white text-white hover:text-black text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all" />
             </Swiper>
           </div>
         </div>
