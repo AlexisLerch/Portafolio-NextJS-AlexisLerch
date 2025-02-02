@@ -49,7 +49,7 @@ const Services = () => {
             <div key={index} className="flex-1 flex flex-col justify-center gap-6 group">
               {/* top */}
               <div className="w-full flex justify-between items-center">
-                <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-black transition-all duration-500">{service.num}</div>
+                <div className="text-5xl font-extrabold text-outline  group-hover:text-black transition-all duration-500">{service.num}</div>
                 <Link target="_blank" href={`${service.path}`} className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-black text-3xl transition-all duration-500 flex justify-center items-center hover:-rotate-45">
                   <BsArrowDownRight className="text-primary hover:text-white"/>
                 </Link>
