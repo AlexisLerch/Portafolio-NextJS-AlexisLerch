@@ -26,7 +26,7 @@ const projects = [
       {name: 'Tailwind'}
     ],
       image: '/assets1/work/thumb2.png',
-      live: 'https://reactjs-ix88ynbk7-alexislerchs-projects.vercel.app/',
+      live: 'reactjs-web-two.vercel.app',
       github: 'https://github.com/AlexisLerch/website-reactjs',
   },
   {
@@ -54,7 +54,7 @@ const projects = [
       {name: 'Tailwind'},
     ],
       image: '/assets1/work/thumb4.png',
-      live: 'https://portfolio-react-main-1nx3nwalg-alexislerchs-projects.vercel.app/',
+      live: 'https://portfolio-react-main-sigma.vercel.app/',
       github: 'https://github.com/AlexisLerch/portfolio-react',
   },
   {
