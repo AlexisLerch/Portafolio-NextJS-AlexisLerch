@@ -26,7 +26,7 @@ const projects = [
       {name: 'Tailwind'}
     ],
       image: '/assets1/work/thumb2.png',
-      live: 'reactjs-web-two.vercel.app',
+      live: 'https://reactjs-web-two.vercel.app/',
       github: 'https://github.com/AlexisLerch/website-reactjs',
   },
   {
@@ -74,7 +74,7 @@ const projects = [
   },
   {
     num: '05',
-    category: 'backend',
+    category: 'python',
     title: 'project 5',
     description: "Menu con algunos ejercicion que fui haciendo con Python.",
     stack: [
@@ -83,6 +83,20 @@ const projects = [
       image: '/assets1/work/thumb5.png',
       live: 'https://github.com/AlexisLerch/Python/blob/main/menu.py',
       github: 'https://github.com/AlexisLerch/Python/blob/main/menu.py',
+  },
+  {
+    num: '06',
+    category: 'javaScript',
+    title: 'project 6',
+    description: "Juego de rol donde podes pelar contra monstruos comprar armas o vida para asi acabar con ellos mas facil hasta matar al dragon final para ganar el juego.",
+    stack: [
+      {name: 'JavaScript'},
+      {name: 'HTML'},
+      {name: 'CSS'}
+    ],
+      image: '/assets1/work/thumb6.png',
+      live: 'https://juego-de-rol.onrender.com/',
+      github: 'https://github.com/AlexisLerch/Juego-de-Rol',
   },
 ]
 
