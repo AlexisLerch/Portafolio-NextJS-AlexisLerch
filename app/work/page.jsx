@@ -26,8 +26,8 @@ const projects = [
       {name: 'Tailwind'}
     ],
       image: '/assets1/work/thumb7.png',
-      live: 'https://reactjs-web-two.vercel.app/',
-      github: 'https://github.com/AlexisLerch/website-reactjs',
+      live: 'https://reactjs-awwwards-website.vercel.app/',
+      github: 'https://github.com/AlexisLerch/Reactjs-app-awwwards',
   },
   {
     num: '02',
