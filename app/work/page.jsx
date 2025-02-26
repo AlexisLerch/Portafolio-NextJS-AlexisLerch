@@ -19,6 +19,20 @@ const projects = [
     num: '01',
     category: 'frontend',
     title: 'project 1',
+    description: "Pagina web creada con React.JS responsiva la promocion de un juego, con videos, imagenes, animaciones y sonido",
+    stack: [
+      {name: 'HTML CSS'},
+      {name: 'React.Js'},
+      {name: 'Tailwind'}
+    ],
+      image: '/assets1/work/thumb7.png',
+      live: 'https://reactjs-web-two.vercel.app/',
+      github: 'https://github.com/AlexisLerch/website-reactjs',
+  },
+  {
+    num: '02',
+    category: 'frontend',
+    title: 'project 2',
     description: "Pagina web creada con React.JS responsiva de una IA ficticia.",
     stack: [
       {name: 'HTML CSS'},
@@ -30,9 +44,23 @@ const projects = [
       github: 'https://github.com/AlexisLerch/website-reactjs',
   },
   {
-    num: '02',
+    num: '03',
+    category: 'javaScript',
+    title: 'project 3',
+    description: "Juego de rol donde podes pelar contra monstruos comprar armas o vida para asi acabar con ellos mas facil hasta matar al dragon final para ganar el juego.",
+    stack: [
+      {name: 'JavaScript'},
+      {name: 'HTML'},
+      {name: 'CSS'}
+    ],
+      image: '/assets1/work/thumb6.png',
+      live: 'https://juego-de-rol.onrender.com/',
+      github: 'https://github.com/AlexisLerch/Juego-de-Rol',
+  },
+  {
+    num: '04',
     category: 'frontend',
-    title: 'project 2',
+    title: 'project 4',
     description: "Pagina web creada con React.JS responsiva de un banco ficticio.",
     stack: [
       {name: 'HTML CSS'},
@@ -44,9 +72,9 @@ const projects = [
       github: 'https://github.com/AlexisLerch/react-bank-app',
   },
   {
-    num: '03',
+    num: '05',
     category: 'frontend',
-    title: 'project 3',
+    title: 'project 5',
     description: "Pagina web creada con React.JS responsiva de un portafolio personal ficticio.",
     stack: [
       {name: 'HTML CSS'},
@@ -58,9 +86,9 @@ const projects = [
       github: 'https://github.com/AlexisLerch/portfolio-react',
   },
   {
-    num: '04',
+    num: '06',
     category: 'frontend',
-    title: 'project 4',
+    title: 'project 6',
     description: "Pagina web creada con Next.JS responsiva de un portafolio personal ficticio.",
     stack: [
       {name: 'HTML CSS'},
@@ -73,10 +101,10 @@ const projects = [
       github: 'https://github.com/AlexisLerch/nextjs-portfolio',
   },
   {
-    num: '05',
+    num: '07',
     category: 'python',
-    title: 'project 5',
-    description: "Menu con algunos ejercicion que fui haciendo con Python.",
+    title: 'project 7',
+    description: "Menu con algunos ejercicion que fui haciendo para estudiar Python.",
     stack: [
       {name: 'Python'},
     ],
@@ -84,20 +112,7 @@ const projects = [
       live: 'https://github.com/AlexisLerch/Python/blob/main/menu.py',
       github: 'https://github.com/AlexisLerch/Python/blob/main/menu.py',
   },
-  {
-    num: '06',
-    category: 'javaScript',
-    title: 'project 6',
-    description: "Juego de rol donde podes pelar contra monstruos comprar armas o vida para asi acabar con ellos mas facil hasta matar al dragon final para ganar el juego.",
-    stack: [
-      {name: 'JavaScript'},
-      {name: 'HTML'},
-      {name: 'CSS'}
-    ],
-      image: '/assets1/work/thumb6.png',
-      live: 'https://juego-de-rol.onrender.com/',
-      github: 'https://github.com/AlexisLerch/Juego-de-Rol',
-  },
+  
 ]
 
 const Work = () => {
