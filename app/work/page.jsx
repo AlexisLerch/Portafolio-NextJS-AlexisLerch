@@ -21,9 +21,11 @@ const projects = [
     title: 'project 1',
     description: "Pagina web creada con React.JS responsiva la promocion de un juego, con videos, imagenes, animaciones y sonido",
     stack: [
-      {name: 'HTML CSS'},
+      // {name: 'HTML'},
+      // {name: 'CSS'},
+      {name: 'JavaScript'},
       {name: 'React.Js'},
-      {name: 'Tailwind'}
+      {name: 'Tailwind'},
     ],
       image: '/assets1/work/thumb7.png',
       live: 'https://reactjs-awwwards-website.vercel.app/',
@@ -35,7 +37,9 @@ const projects = [
     title: 'project 2',
     description: "Pagina web creada con React.JS responsiva de una IA ficticia.",
     stack: [
-      {name: 'HTML CSS'},
+      // {name: 'HTML'},
+      // {name: 'CSS'},
+      {name: 'JavaScript'},
       {name: 'React.Js'},
       {name: 'Tailwind'}
     ],
@@ -49,9 +53,9 @@ const projects = [
     title: 'project 3',
     description: "Juego de rol donde podes pelar contra monstruos comprar armas o vida para asi acabar con ellos mas facil hasta matar al dragon final para ganar el juego.",
     stack: [
-      {name: 'JavaScript'},
       {name: 'HTML'},
-      {name: 'CSS'}
+      {name: 'CSS'},
+      {name: 'JavaScript'},
     ],
       image: '/assets1/work/thumb6.png',
       live: 'https://juego-de-rol.onrender.com/',
@@ -63,12 +67,14 @@ const projects = [
     title: 'project 4',
     description: "Pagina web creada con React.JS responsiva de un banco ficticio.",
     stack: [
-      {name: 'HTML CSS'},
+      // {name: 'HTML'},
+      // {name: 'CSS'},
+      {name: 'JavaScript'},
       {name: 'React.Js'},
       {name: 'Tailwind'}
     ],
       image: '/assets1/work/thumb1.png',
-      live: 'https://github.com/AlexisLerch/react-bank-app',
+      live: '',
       github: 'https://github.com/AlexisLerch/react-bank-app',
   },
   {
@@ -77,7 +83,9 @@ const projects = [
     title: 'project 5',
     description: "Pagina web creada con React.JS responsiva de un portafolio personal ficticio.",
     stack: [
-      {name: 'HTML CSS'},
+      // {name: 'HTML'},
+      // {name: 'CSS'},
+      {name: 'JavaScript'},
       {name: 'React.js'},
       {name: 'Tailwind'},
     ],
@@ -91,19 +99,93 @@ const projects = [
     title: 'project 6',
     description: "Pagina web creada con Next.JS responsiva de un portafolio personal ficticio.",
     stack: [
-      {name: 'HTML CSS'},
+      // {name: 'HTML'},
+      // {name: 'CSS'},
+      {name: 'JavaScript'},
       {name: 'Next.js'},
       {name: 'Tailwind'},
 
     ],
       image: '/assets1/work/thumb3.png',
-      live: 'https://github.com/AlexisLerch/nextjs-portfolio',
+      live: '',
       github: 'https://github.com/AlexisLerch/nextjs-portfolio',
   },
   {
     num: '07',
-    category: 'python',
+    category: 'JavaScript',
     title: 'project 7',
+    description: "Aplicacion de busqueda de pokemones con javascript y la api de pokemon.",
+    stack: [
+      {name: 'HTML'},
+      {name: 'CSS'},
+      {name: 'JavaScript'},
+      ],
+      image: '/assets1/work/thumb8.png',
+      live: 'https://pokemon-search-app.onrender.com',
+      github: 'https://github.com/AlexisLerch/Pokemon-search-app',
+  },
+  {
+    num: '08',
+    category: 'visualizacion de datos',
+    title: 'project 8',
+    description: "Mapa de coropletas con D3.js y la api de datos de educacion de Estados Unidos de porcentaje de adultos de 25 años o más con un título universitario o superior en 2010-2014.",
+    stack: [
+      {name: 'HTML'},
+      {name: 'CSS'},
+      {name: 'JavaScript'},
+      {name: 'D3.js'}
+    ],
+      image: '/assets1/work/thumb12.png',
+      live: 'https://choropleth-map-c4zw.onrender.com',
+      github: 'https://github.com/AlexisLerch/Choropleth-Map',
+  },
+  {
+    num: '09',
+    category: 'visualizacion de datos',
+    title: 'project 9',
+    description: "Grafico de barras con D3.js y la api de datos de Estados Unidos del PIB. del 1947 al 2015.",
+    stack: [
+      {name: 'HTML'},
+      {name: 'CSS'},
+      {name: 'JavaScript'},
+      {name: 'D3.js'}
+    ],
+      image: '/assets1/work/thumb9.png',
+      live: 'https://usa-gdp-6nev.onrender.com',
+      github: 'https://github.com/AlexisLerch/USA-GDP',
+  },
+  {
+    num: '10',
+    category: 'JavaScript',
+    title: 'project 10',
+    description: "Ejercicio de freeCodeCamp con JavaScript, donde hago un carrito de compra añadiendo productos.",
+    stack: [
+      {name: 'HTML'},
+      {name: 'CSS'},
+      {name: 'JavaScript'},
+    ],
+      image: '/assets1/work/thumb10.png',
+      live: 'https://shopping-cart-javascript.onrender.com',
+      github: 'https://github.com/AlexisLerch/Shopping-cart-javascript',
+  },
+  {
+    num: '11',
+    category: 'JavaScript',
+    title: 'project 11',
+    description: "Juego de plataformas con javascript programacion orientada a objetos.",
+    stack: [
+      {name: 'HTML'},
+      {name: 'CSS'},
+      {name: 'JavaScript'},
+    ],
+      image: '/assets1/work/thumb11.png',
+      live: 'https://poo-platformer-game.onrender.com',
+      github: 'https://github.com/AlexisLerch/POO-platformer-game',
+  },
+  {
+    num: '12',
+    category: 'python',
+    title: 'project 12',
     description: "Menu con algunos ejercicion que fui haciendo para estudiar Python.",
     stack: [
       {name: 'Python'},
@@ -111,6 +193,33 @@ const projects = [
       image: '/assets1/work/thumb5.png',
       live: 'https://github.com/AlexisLerch/Python/blob/main/menu.py',
       github: 'https://github.com/AlexisLerch/Python/blob/main/menu.py',
+  },
+  {
+    num: '13',
+    category: 'SQL',
+    title: 'project 13',
+    description: "Ejercicio de FreeCodeCamp de una base de datos de una tienda de bicicletas con PostgreSQL.",
+    stack: [
+      {name: 'PostgreSQL'},
+      {name: 'SQL'},
+    ],
+      image: '/assets1/work/thumb13.png',
+      live: '',
+      github: 'https://github.com/AlexisLerch/Bike-shop-psql',
+  },
+  {
+    num: '14',
+    category: 'React Native',
+    title: 'project 14',
+    description: "Aplicacion de busqueda de peliculas con React Native y la api de peliculas.",
+    stack: [
+      {name: 'React Native'},
+      {name: 'TypeScript'},
+      {name: 'Expo'},
+    ],
+      image: '/assets1/work/thumb14.png',
+      live: 'https://alexislerch-reactnative--nby5ipxa73.expo.app/',
+      github: 'https://github.com/AlexisLerch/Movie-app',
   },
   
 ]
@@ -127,10 +236,9 @@ const Work = () => {
 
   return (
     <motion.section initial={{opacity: 0}} animate={{opacity: 1, transition: 
-      {delay: 2.4, duration: 0.4, ease: "easeIn"},}} 
+      {delay: 0.5, duration: 0.4, ease: "easeIn"},}} 
     className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0">
       <div className="container mx-auto">
-      {/* <h2 className="text-center pb-20 text-xl text-white/70">Esta seccion es solo de demostracion</h2> */}
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">

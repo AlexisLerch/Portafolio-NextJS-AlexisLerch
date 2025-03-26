@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import { saveAs } from "file-saver";
 import { FaCopy } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 // componentes
 import Social from "@/components/Social";
@@ -14,6 +15,8 @@ import Link from "next/link";
 const Home = () => {
   return (
     <section className="h-full">
+      <motion.section initial={{opacity: 0}} animate={{opacity: 1, transition: 
+      {delay: 0.5, duration: 0.4, ease: "easeIn"},}} >
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
@@ -43,13 +46,14 @@ const Home = () => {
           </div>
 
           {/* photo */}
-          <div className="order-1 xl:order-none mb-8 xl:mb-0">
+          {/* <div className="order-1 xl:order-none mb-8 xl:mb-0">
             <Photo />
-          </div>
+          </div> */}
         </div>
       </div>
         
       {/* <Stats /> */}
+      </motion.section>
     </section>
   )
 }
