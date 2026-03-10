@@ -278,19 +278,15 @@ const Work = () => {
               {/* project description */}
               <p className="text-white/60">{project.description}</p>
               {/* stack */}
-              <ul className="flex gap-2">
-                {project.stack.map((item, index) => {
-                  return (
-                    <li
-                      key={index}
-                      className="text-xl font-extrabold text-withe"
-                    >
-                      {item.name}
-                      {/* sacar la ultima coma */}
-                      {index !== project.stack.length - 1 && ","}
-                    </li>
-                  );
-                })}
+              <ul className="flex flex-wrap gap-2">
+                {project.stack.map((item, index) => (
+                  <li
+                    key={index}
+                    className="px-3 py-1 text-sm xl:text-base font-semibold "
+                  >
+                    {item.name}
+                  </li>
+                ))}
               </ul>
               {/* border */}
               <div className="border-4 border-black"></div>

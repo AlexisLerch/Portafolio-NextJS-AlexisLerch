@@ -23,7 +23,6 @@ import Photo from "@/components/Photo";
 
 // experience data
 const experience = {
-  icon: "/assets1/resume/badge.svg",
   title: "Mi experiencia",
   description:
     "Participación en proyectos de desarrollo web creando interfaces dinámicas, optimizadas y enfocadas en la experiencia del usuario.",
@@ -40,26 +39,13 @@ const experience = {
 
 // education data
 const education = {
-  icon: "/assets1/resume/cap.svg",
   title: "Mi educación",
   description:
     "He desarrollado mis conocimientos a través de cursos online y aprendizaje autodidacta, enfocándome en tecnologías clave del desarrollo web.",
   items: [
-    {
-      institution: "FreeCodeCamp",
-      degree: "HTML5 y CSS3",
-      duration: "2022",
-    },
-    {
-      institution: "FreeCodeCamp",
-      degree: "JavaScript",
-      duration: "2023",
-    },
-    {
-      institution: "FreeCodeCamp",
-      degree: "Python",
-      duration: "2024",
-    },
+    { institution: "FreeCodeCamp", degree: "HTML5 y CSS3", duration: "2022" },
+    { institution: "FreeCodeCamp", degree: "JavaScript", duration: "2023" },
+    { institution: "FreeCodeCamp", degree: "Python", duration: "2024" },
     {
       institution: "Aprendizaje autodidacta",
       degree: "React.js & Next.js",
@@ -72,7 +58,7 @@ const education = {
 const skills = {
   title: "Tecnologías",
   description:
-    "Stack de tecnologías que utilizo para construir interfaces modernas, rápidas y escalables en el desarrollo web.",
+    "Stack de tecnologías que utilizo para construir interfaces modernas, rápidas y escalables.",
   skillList: [
     { icon: <SiNextdotjs />, name: "next.js" },
     { icon: <SiTailwindcss />, name: "tailwind.css" },
@@ -91,25 +77,22 @@ const Resume = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 0.5, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 0.3, duration: 0.4 },
       }}
       className="relative min-h-[80vh] flex items-center py-12 xl:py-0"
     >
-      {/* FOTO */}
-
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <Tabs
           defaultValue="experience"
-          className="flex flex-col xl:flex-row items-start gap-[60px]"
+          className="flex flex-col xl:flex-row gap-10 xl:gap-[60px]"
         >
-          {/* TABS */}
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <div className="flex flex-col items-center">
+          {/* LEFT SIDE */}
+          <TabsList className="flex flex-col w-full max-w-[320px] mx-auto xl:mx-0 gap-4">
+            <div className="flex justify-center mb-2">
               <Photo />
             </div>
-            <TabsTrigger className="rounded-[10px]" value="experience">
-              Experiencia
-            </TabsTrigger>
+
+            <TabsTrigger className="rounded-[10px]">Experiencia</TabsTrigger>
 
             <TabsTrigger className="rounded-[10px]" value="skills">
               Tecnologías
@@ -120,25 +103,27 @@ const Resume = () => {
             </TabsTrigger>
           </TabsList>
 
-          {/* CONTENIDO */}
-          <div className="min-h-[70vh] w-full mt-20">
+          {/* CONTENT */}
+          <div className="w-full mt-10 xl:mt-0">
             {/* EXPERIENCE */}
             <TabsContent value="experience">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{experience.title}</h3>
+              <div className="flex flex-col gap-6 text-center xl:text-left">
+                <h3 className="text-3xl xl:text-4xl font-bold">
+                  {experience.title}
+                </h3>
 
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-sm xl:text-base">
                   {experience.description}
                 </p>
 
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                <ScrollArea className="h-[350px] xl:h-[400px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {experience.items.map((item, index) => (
                       <li
                         key={index}
-                        className="bg-[#232329] hover:bg-[#2a2a32] transition-colors py-6 px-8 rounded-xl flex flex-col gap-3"
+                        className="bg-[#232329] hover:bg-[#2a2a32] transition-colors p-6 rounded-xl flex flex-col gap-3"
                       >
-                        <span className="text-white font-bold">
+                        <span className="text-white font-bold text-sm">
                           {item.duration}
                         </span>
 
@@ -146,7 +131,7 @@ const Resume = () => {
                           {item.position}
                         </h3>
 
-                        <div className="flex items-center gap-2 text-white/70">
+                        <div className="flex items-center gap-2 text-white/70 text-sm">
                           <span className="w-[6px] h-[6px] rounded-full bg-white"></span>
                           {item.company}
                         </div>
@@ -163,27 +148,29 @@ const Resume = () => {
 
             {/* EDUCATION */}
             <TabsContent value="education">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{education.title}</h3>
+              <div className="flex flex-col gap-6 text-center xl:text-left">
+                <h3 className="text-3xl xl:text-4xl font-bold">
+                  {education.title}
+                </h3>
 
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-sm xl:text-base">
                   {education.description}
                 </p>
 
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                <ScrollArea className="h-[350px] xl:h-[400px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {education.items.map((item, index) => (
                       <li
                         key={index}
-                        className="bg-[#232329] hover:bg-[#2a2a32] transition-colors py-6 px-8 rounded-xl flex flex-col gap-2"
+                        className="bg-[#232329] hover:bg-[#2a2a32] transition-colors p-6 rounded-xl flex flex-col gap-2"
                       >
-                        <span className="text-white font-bold">
+                        <span className="text-white font-bold text-sm">
                           {item.duration}
                         </span>
 
                         <h3 className="text-lg">{item.degree}</h3>
 
-                        <div className="flex items-center gap-2 text-white/60">
+                        <div className="flex items-center gap-2 text-white/60 text-sm">
                           <span className="w-[6px] h-[6px] rounded-full bg-white"></span>
                           {item.institution}
                         </div>
@@ -196,22 +183,24 @@ const Resume = () => {
 
             {/* SKILLS */}
             <TabsContent value="skills">
-              <div className="flex flex-col gap-[30px]">
-                <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">{skills.title}</h3>
+              <div className="flex flex-col gap-6">
+                <div className="text-center xl:text-left">
+                  <h3 className="text-3xl xl:text-4xl font-bold">
+                    {skills.title}
+                  </h3>
 
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-sm xl:text-base">
                     {skills.description}
                   </p>
                 </div>
 
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-7">
+                <ul className="grid grid-cols-3 sm:grid-cols-4 gap-5">
                   {skills.skillList.map((skill, index) => (
                     <li key={index}>
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
-                          <TooltipTrigger className="w-full h-[140px] bg-[#232329] hover:bg-[#2a2a32] transition-colors rounded-xl flex justify-center items-center group">
-                            <div className="text-5xl group-hover:scale-110 transition">
+                          <TooltipTrigger className="w-full h-[110px] xl:h-[140px] bg-[#232329] hover:bg-[#2a2a32] transition-colors rounded-xl flex justify-center items-center group">
+                            <div className="text-4xl xl:text-5xl group-hover:scale-110 transition">
                               {skill.icon}
                             </div>
                           </TooltipTrigger>

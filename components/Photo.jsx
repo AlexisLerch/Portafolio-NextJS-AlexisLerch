@@ -14,7 +14,7 @@ const Photo = () => {
         }}
       >
         {/* imagen */}
-        <motion.div className="w-[240px] h-[240px] xl:w-[320px] xl:h-[320px] absolute -top-[30px] left-[0px]">
+        <motion.div className="w-[320px] h-[320px] xl:w-[320px] xl:h-[320px] absolute -top-[30px] left-[0px]">
           <Image
             src="/assets1/perfil6.png"
             priority
