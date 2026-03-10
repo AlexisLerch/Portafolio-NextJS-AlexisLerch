@@ -13,18 +13,18 @@ const links = [
         name: "proyectos",
         path: "/work",
     },
-    {
-        name: "resumen",
-        path: "/resume",
-    },
-    {
-        name: "servicios",
-        path: "/services",
-    },
-    {
-        name: "contacto",
-        path: "/contact",
-    },
+    // {
+    //     name: "resumen",
+    //     path: "/resume",
+    // },
+    // {
+    //     name: "servicios",
+    //     path: "/services",
+    // },
+    // {
+    //     name: "contacto",
+    //     path: "/contact",
+    // },
 ]
 
 const Nav = () => {

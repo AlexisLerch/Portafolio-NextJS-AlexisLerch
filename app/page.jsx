@@ -25,14 +25,15 @@ const Home = () => {
           <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
             {/* text */}
             <div className="text-center xl:text-left order-2 xl:order-none sm:item-center md:item-center">
-              <span className="text-xl">Software Developer</span>
+              <span className="text-xl">Desarrollador FullStack</span>
               <h1 className="h1 ">
                 Hola soy <br />{" "}
                 <span className="text-white/45 ">Alexis Lerch</span>
               </h1>
               <p className="max-w-[500px] mb-9 text-white/80">
-                Me destaco en la creación de experiencias digitales elegantes
-                dominando varios lenguajes y tecnologías de programación.
+                Desarrollo aplicaciones web modernas con React y Next.js,
+                creando interfaces rápidas, accesibles y optimizadas para
+                ofrecer una excelente experiencia al usuario.
               </p>
 
               {/* boton y social */}
@@ -40,13 +41,14 @@ const Home = () => {
                 <Button
                   onClick={() => {
                     navigator.clipboard.writeText("alexis.lerch123@gmail.com");
-                    {
-                      alert("Email copiado!");
-                    }
+                    alert("Email copiado!");
                   }}
                   variant="outline"
                   size="sm"
-                  className="mb-5 flex items-center gap-2"
+                  className="mb-5 flex items-center gap-2
+bg-black text-white border border-white rounded-[10px]
+hover:bg-white hover:text-black
+transition-colors duration-300"
                 >
                   <span>alexis.lerch123@gmail.com</span>
                   <FaCopy />
@@ -61,24 +63,22 @@ const Home = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="uppercase flex items-center gap-2 sm:items-center"
+                    className="flex items-center gap-2
+bg-black text-white border border-white rounded-[10px]
+hover:bg-white hover:text-black
+transition-colors duration-300"
                   >
                     <span>Descargar CV</span>
-                    <FiDownload className="text-xl " />
+                    <FiDownload className="text-xl" />
                   </Button>
                 </a>
                 <div className="mb-8 xl:mb-0">
                   <Social
-                    containerStyles="flex gap-6"
+                    containerStyles="flex gap-6 "
                     iconStyles="w-9 h-9 border border-color-white rounded-[10px] flex justify-center items-center bg-black text-base hover:bg-white hover:text-black hover:border-[11px] hover:transition-all duration-500"
                   />
                 </div>
               </div>
-            </div>
-
-            {/* photo */}
-            <div className="order-1 xl:order-none mb-8 xl:mb-0">
-              <Photo className="p-4" />
             </div>
           </div>
         </div>

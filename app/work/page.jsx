@@ -25,6 +25,23 @@ const projects = [
     category: "FullStack",
     title: "project 1",
     description:
+      "Desarrollé una aplicación de ecommerce donde los usuarios pueden explorar productos, agregarlos al carrito y simular un proceso de compra. La aplicación cuenta con un frontend moderno construido con Next.js y TailwindCSS, manejo de estado global para el carrito con Zustand y una experiencia de usuario optimizada con animaciones y diseño responsive para dispositivos móviles y escritorio.",
+    stack: [
+      { name: "JavaScript" },
+      { name: "Next.Js" },
+      { name: "Tailwind" },
+      { name: "Prisma" },
+      { name: "PostgreSQL (Supabase)" },
+    ],
+    image: "/assets1/work/ecommerce1.png",
+    live: "https://my-e-ccomerce-alexis-lerch.vercel.app/",
+    github: "https://github.com/AlexisLerch/e-commers",
+  },
+  {
+    num: "02",
+    category: "FullStack",
+    title: "project 2",
+    description:
       "Desarrollé una aplicación web de películas que permite a los usuarios descubrir, calificar y guardar sus películas favoritas. Implementé un frontend interactivo con Next.js y TailwindCSS, y un backend con Next.js API Routes, Prisma y PostgreSQL, manejando autenticación, watchlist, favoritos y ratings. La app consume la TMDB API para obtener información de películas y ofrece una experiencia de usuario fluida con scroll infinito y diseño responsive para móviles y escritorio.",
     stack: [
       { name: "JavaScript" },
@@ -38,26 +55,20 @@ const projects = [
     github: "https://github.com/AlexisLerch/movies-app-nextjs",
   },
   {
-    num: "02",
+    num: "03",
     category: "frontend",
-    title: "project 2",
+    title: "project 3",
     description:
       "Pagina web creada con React.JS responsiva la promocion de un juego, con videos, imagenes, animaciones y sonido",
-    stack: [
-      // {name: 'HTML'},
-      // {name: 'CSS'},
-      { name: "JavaScript" },
-      { name: "React.Js" },
-      { name: "Tailwind" },
-    ],
+    stack: [{ name: "JavaScript" }, { name: "React.Js" }, { name: "Tailwind" }],
     image: "/assets1/work/thumb7.png",
     live: "https://reactjs-awwwards-website.vercel.app/",
     github: "https://github.com/AlexisLerch/Reactjs-app-awwwards",
   },
   {
-    num: "03",
+    num: "04",
     category: "frontend",
-    title: "project 3",
+    title: "project 4",
     description:
       "Pagina web creada con React.JS responsiva de una IA ficticia.",
     stack: [
@@ -72,9 +83,9 @@ const projects = [
     github: "https://github.com/AlexisLerch/website-reactjs",
   },
   {
-    num: "04",
+    num: "05",
     category: "javaScript",
-    title: "project 4",
+    title: "project 5",
     description:
       "Juego de rol donde podes pelar contra monstruos comprar armas o vida para asi acabar con ellos mas facil hasta matar al dragon final para ganar el juego.",
     stack: [{ name: "HTML" }, { name: "CSS" }, { name: "JavaScript" }],
@@ -83,9 +94,9 @@ const projects = [
     github: "https://github.com/AlexisLerch/Juego-de-Rol",
   },
   {
-    num: "05",
+    num: "06",
     category: "frontend",
-    title: "project 5",
+    title: "project 6",
     description:
       "Pagina web creada con React.JS responsiva de un banco ficticio.",
     stack: [
@@ -100,9 +111,9 @@ const projects = [
     github: "https://github.com/AlexisLerch/react-bank-app",
   },
   {
-    num: "06",
+    num: "07",
     category: "frontend",
-    title: "project 6",
+    title: "project 7",
     description:
       "Pagina web creada con React.JS responsiva de un portafolio personal ficticio.",
     stack: [
@@ -117,9 +128,9 @@ const projects = [
     github: "https://github.com/AlexisLerch/portfolio-react",
   },
   {
-    num: "07",
+    num: "08",
     category: "frontend",
-    title: "project 7",
+    title: "project 8",
     description:
       "Pagina web creada con Next.JS responsiva de un portafolio personal ficticio.",
     stack: [
@@ -134,9 +145,9 @@ const projects = [
     github: "https://github.com/AlexisLerch/nextjs-portfolio",
   },
   {
-    num: "08",
+    num: "09",
     category: "JavaScript",
-    title: "project 8",
+    title: "project 9",
     description:
       "Aplicacion de busqueda de pokemones con javascript y la api de pokemon.",
     stack: [{ name: "HTML" }, { name: "CSS" }, { name: "JavaScript" }],
@@ -145,9 +156,9 @@ const projects = [
     github: "https://github.com/AlexisLerch/Pokemon-search-app",
   },
   {
-    num: "09",
+    num: "10",
     category: "visualizacion de datos",
-    title: "project 9",
+    title: "project 10",
     description:
       "Mapa de coropletas con D3.js y la api de datos de educacion de Estados Unidos de porcentaje de adultos de 25 años o más con un título universitario o superior en 2010-2014.",
     stack: [
@@ -161,9 +172,9 @@ const projects = [
     github: "https://github.com/AlexisLerch/Choropleth-Map",
   },
   {
-    num: "10",
+    num: "11",
     category: "visualizacion de datos",
-    title: "project 10",
+    title: "project 11",
     description:
       "Grafico de barras con D3.js y la api de datos de Estados Unidos del PIB. del 1947 al 2015.",
     stack: [
@@ -177,9 +188,9 @@ const projects = [
     github: "https://github.com/AlexisLerch/USA-GDP",
   },
   {
-    num: "11",
+    num: "12",
     category: "JavaScript",
-    title: "project 11",
+    title: "project 12",
     description:
       "Ejercicio de freeCodeCamp con JavaScript, donde hago un carrito de compra añadiendo productos.",
     stack: [{ name: "HTML" }, { name: "CSS" }, { name: "JavaScript" }],
@@ -188,9 +199,9 @@ const projects = [
     github: "https://github.com/AlexisLerch/Shopping-cart-javascript",
   },
   {
-    num: "12",
+    num: "13",
     category: "JavaScript",
-    title: "project 12",
+    title: "project 13",
     description:
       "Juego de plataformas con javascript programacion orientada a objetos.",
     stack: [{ name: "HTML" }, { name: "CSS" }, { name: "JavaScript" }],
@@ -199,9 +210,9 @@ const projects = [
     github: "https://github.com/AlexisLerch/POO-platformer-game",
   },
   {
-    num: "13",
+    num: "14",
     category: "python",
-    title: "project 13",
+    title: "project 14",
     description:
       "Menu con algunos ejercicion que fui haciendo para estudiar Python.",
     stack: [{ name: "Python" }],
@@ -210,9 +221,9 @@ const projects = [
     github: "https://github.com/AlexisLerch/Python/blob/main/menu.py",
   },
   {
-    num: "14",
+    num: "15",
     category: "SQL",
-    title: "project 14",
+    title: "project 15",
     description:
       "Ejercicio de FreeCodeCamp de una base de datos de una tienda de bicicletas con PostgreSQL.",
     stack: [{ name: "PostgreSQL" }, { name: "SQL" }],
@@ -221,9 +232,9 @@ const projects = [
     github: "https://github.com/AlexisLerch/Bike-shop-psql",
   },
   {
-    num: "15",
+    num: "16",
     category: "React Native",
-    title: "project 15",
+    title: "project 16",
     description:
       "Aplicacion de busqueda de peliculas con React Native y la api de peliculas.",
     stack: [{ name: "React Native" }, { name: "TypeScript" }, { name: "Expo" }],
@@ -282,7 +293,7 @@ const Work = () => {
                 })}
               </ul>
               {/* border */}
-              <div className=" border border-4 border-black"></div>
+              <div className="border-4 border-black"></div>
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live projects button */}
