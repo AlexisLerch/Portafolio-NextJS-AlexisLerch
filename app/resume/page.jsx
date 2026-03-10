@@ -91,13 +91,12 @@ const Resume = () => {
             <div className="flex justify-center mb-2">
               <Photo />
             </div>
-
-            <TabsTrigger className="rounded-[10px]">Experiencia</TabsTrigger>
-
+            <TabsTrigger className="rounded-[10px]" value="experience">
+              Experiencia
+            </TabsTrigger>
             <TabsTrigger className="rounded-[10px]" value="skills">
               Tecnologías
             </TabsTrigger>
-
             <TabsTrigger className="rounded-[10px]" value="education">
               Educación
             </TabsTrigger>
