@@ -32,5 +32,5 @@ Portafolio personal de Alexis Lerch (desarrollador FullStack, San Martín de los
 
 - `next.config.mjs` habilita `images.qualities: [75, 90]`. Next 16 ignora cualquier `quality` que no esté en esa lista (la foto de perfil usa 90). La optimización de imágenes está activa a propósito: antes se había desactivado y la foto se veía pixelada.
 - La foto de perfil es `public/assets1/alexisperfil.jpg` (horizontal, viene de WhatsApp); `components/Photo.jsx` la recorta con `object-cover object-[53%_30%]`. El ícono de la pestaña es `app/icon.svg` (monograma "A.").
-- El e-commerce MyEc (`my-e-ccomerce-alexis-lerch.vercel.app`) está caído (error 500 del servidor); por eso su proyecto no tiene `live`. Si se arregla, agregar el link en `lib/data.jsx`.
+- El e-commerce MyEc (`my-e-ccomerce-alexis-lerch.vercel.app`) está caído (error 500 del servidor, probablemente Supabase o una variable de entorno en Vercel), pero su proyecto en `lib/data.jsx` mantiene el link `live` a propósito hasta que se arregle.
 - Git: la rama es `main` y hay un único remoto (`origin`) en GitHub. Antes de trabajar conviene hacer `git fetch`: ya hubo trabajo hecho directamente en el remoto que no estaba en la copia local.

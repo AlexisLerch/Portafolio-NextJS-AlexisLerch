@@ -49,7 +49,7 @@ const projectList = [
       "E-commerce con Next.js: registro e inicio de sesión con NextAuth, productos por categoría, carrito y simulación de compra. Estado global con Zustand, base de datos PostgreSQL en Supabase con Prisma y animaciones con Framer Motion.",
     stack: ["Next.js", "TypeScript", "NextAuth", "Prisma", "Supabase", "Tailwind"],
     image: "/assets1/work/ecommerce1.png",
-    live: "",
+    live: "https://my-e-ccomerce-alexis-lerch.vercel.app/",
     github: "https://github.com/AlexisLerch/e-commers",
   },
   {
