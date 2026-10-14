@@ -4,10 +4,10 @@ import { Code, Smartphone, LayoutTemplate, BarChart3, MessageSquare, PenTool, Ro
 
 export const profile = {
   name: "Alexis Lerch",
-  role: "Desarrollador de software",
+  role: "Desarrollador FullStack",
   tagline: "Interfaces claras, rápidas y bien cuidadas.",
   intro:
-    "Soy desarrollador de software de San Martín de los Andes, Neuquén, Argentina. Me gusta convertir ideas en sitios y aplicaciones que se ven bien, andan rápido y se sienten simples de usar. Trabajo sobre todo con React, Next.js y JavaScript.",
+    "Soy de San Martín de los Andes, Neuquén. Desarrollo aplicaciones web modernas con React y Next.js, creando interfaces rápidas, accesibles y optimizadas para ofrecer una excelente experiencia al usuario.",
   email: "lerchalexisdamian@gmail.com",
   phone: "(+54) 3434677723",
   phoneHref: "tel:+543434677723",
@@ -15,6 +15,8 @@ export const profile = {
   cv: "/assets1/AlexisLerch-cv.pdf",
   github: "https://github.com/AlexisLerch",
   linkedin: "https://www.linkedin.com/in/alexis-lerch-6a9ba1217/",
+  whatsapp:
+    "https://wa.me/5493434677723?text=Hola%20Alexis%20vi%20tu%20portafolio%20y%20quiero%20contactarte",
 };
 
 export const navLinks = [
@@ -25,12 +27,12 @@ export const navLinks = [
   { name: "Contacto", path: "/contact" },
 ];
 
-export const projectCategories = ["Todos", "E-commerce", "Frontend", "JavaScript", "Datos", "Python", "SQL", "Mobile"];
+export const projectCategories = ["Todos", "FullStack", "Frontend", "JavaScript", "Datos", "Python", "SQL", "Mobile"];
 
 const projectList = [
   {
     title: "La Comarca de Cera",
-    category: "E-commerce",
+    category: "FullStack",
     featured: true,
     description:
       "Tienda online de velas artesanales: catálogo con búsqueda, favoritos, carrito de compras y pago con Mercado Pago. Productos y pedidos guardados en una base de datos con Prisma y Supabase.",
@@ -41,12 +43,12 @@ const projectList = [
   },
   {
     title: "E-commerce MyEc",
-    category: "E-commerce",
+    category: "FullStack",
     featured: true,
     description:
-      "E-commerce completo con Next.js: registro e inicio de sesión con NextAuth, catálogo por categorías, carrito y pantalla de checkout, con animaciones hechas con Framer Motion.",
+      "E-commerce con Next.js: registro e inicio de sesión con NextAuth, productos por categoría, carrito y simulación de compra. Estado global con Zustand, base de datos PostgreSQL en Supabase con Prisma y animaciones con Framer Motion.",
     stack: ["Next.js", "TypeScript", "NextAuth", "Prisma", "Supabase", "Tailwind"],
-    image: "/assets1/work/thumb15.png",
+    image: "/assets1/work/ecommerce1.png",
     live: "",
     github: "https://github.com/AlexisLerch/e-commers",
   },
@@ -61,6 +63,16 @@ const projectList = [
     image: "/assets1/work/thumb7.png",
     live: "https://reactjs-awwwards-website.vercel.app/",
     github: "https://github.com/AlexisLerch/Reactjs-app-awwwards",
+  },
+  {
+    title: "App de películas",
+    category: "FullStack",
+    description:
+      "Aplicación web para descubrir, calificar y guardar películas. Tiene autenticación, watchlist, favoritos y ratings, y consume la API de TMDB con scroll infinito. Backend con API Routes de Next.js, Prisma y PostgreSQL.",
+    stack: ["Next.js", "Prisma", "PostgreSQL", "Tailwind", "TMDB API"],
+    image: "/assets1/work/movieapp.png",
+    live: "https://movies-app-alexislerch.vercel.app/",
+    github: "https://github.com/AlexisLerch/movies-app-nextjs",
   },
   {
     num: "02",
@@ -196,7 +208,7 @@ const projectList = [
   },
   {
     num: "14",
-    title: "Buscador de películas",
+    title: "App de películas móvil",
     category: "Mobile",
     description:
       "App móvil para buscar películas, hecha con React Native, TypeScript y Expo, consumiendo una API pública.",
@@ -224,11 +236,21 @@ export const skills = [
   { name: "Node.js", icon: <FaNodeJs /> },
 ];
 
+export const experience = [
+  {
+    position: "Frontend Developer (Pasantía)",
+    company: "SwaplyAr · Argentina",
+    period: "Mayo 2025 - Noviembre 2025",
+    description:
+      "Desarrollo de interfaces con React y Next.js, integración con APIs y mejoras en la experiencia de usuario.",
+  },
+];
+
 export const education = [
   { degree: "HTML 5 y CSS", institution: "freeCodeCamp · cursos online", year: "2022" },
   { degree: "JavaScript", institution: "freeCodeCamp · cursos online", year: "2023" },
   { degree: "Python", institution: "freeCodeCamp · cursos online", year: "2024" },
-  { degree: "React.js y Next.js", institution: "Autodidacta, con tutoriales y proyectos propios", year: "2024" },
+  { degree: "React.js y Next.js", institution: "Aprendizaje autodidacta, con tutoriales y proyectos propios", year: "2024 - 2025" },
 ];
 
 export const about = {
