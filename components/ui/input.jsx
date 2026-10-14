@@ -1,19 +1,13 @@
-import * as React from "react"
+import * as React from "react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
-const Input = React.forwardRef(({ className, type, ...props }, ref) => {
-  return (
-    (<input
-      type={type}
-      className={cn(
-        "flex h-[48px] border border-white/10 focus:border-black font-light bg-primary px-4 py-5 text-base placeholder:text-white/60 outline-none",
-        className
-      )}
-      ref={ref}
-      {...props} />)
-  );
-})
-Input.displayName = "Input"
+const fieldStyles =
+  "w-full rounded-xl border border-white/10 bg-primary/60 px-4 text-base text-white placeholder:text-white/35 outline-none transition-colors focus:border-accent/70 focus:bg-primary";
 
-export { Input }
+const Input = React.forwardRef(({ className, type, ...props }, ref) => (
+  <input type={type} className={cn(fieldStyles, "h-12", className)} ref={ref} {...props} />
+));
+Input.displayName = "Input";
+
+export { Input, fieldStyles };

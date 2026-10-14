@@ -1,39 +1,38 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { JetBrains_Mono } from "next/font/google";
 
-// componentes
 import Header from "@/components/Header";
-import PageTransition from "@/components/PageTransition";
-import StairTransition from "@/components/StairTransition";
+import Footer from "@/components/Footer";
 
-const jetbrainsMono = JetBrains_Mono({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-jetbrainsMono",
+const sans = Geist({
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const mono = JetBrains_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
 });
 
 export const metadata = {
-  title: "Alexis Lerch",
-  description: "Alexis Lerch",
+  title: "Alexis Lerch · Desarrollador de software",
+  description:
+    "Portafolio de Alexis Lerch, desarrollador de software de Argentina. Sitios y apps con React, Next.js, JavaScript y React Native.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={jetbrainsMono.variable}
-      >
+    <html lang="es">
+      <body className={`${sans.variable} ${mono.variable} relative min-h-screen overflow-x-clip`}>
+        {/* fondo decorativo */}
+        <div className="pointer-events-none fixed inset-0 -z-10" aria-hidden>
+          <div className="bg-grid absolute inset-0" />
+          <div className="absolute left-1/2 top-[-12rem] h-[28rem] w-[56rem] -translate-x-1/2 rounded-full bg-white/[0.06] blur-[120px]" />
+        </div>
+
         <Header />
-        {/* <StairTransition /> */}
-        {/* <PageTransition> */}
-          {children}
-        {/* </PageTransition> */}
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

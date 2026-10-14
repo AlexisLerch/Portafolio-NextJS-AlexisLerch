@@ -1,67 +1,58 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { FaReact } from "react-icons/fa";
+import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
 
-const Photo = () => {
-  return (
-    <div className="w-full h-full relative">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: { delay: 0.5, duration: 0.4, ease: "easeIn" },
-        }}
-      >
-        {/* imagen */}
-        <motion.div
-          initial={{ opacity: 1 }}
-          animate={{
-            opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
-          }}
-          className="w-[298px] h-[278px] xl:w-[500px] xl:h-[480px]  absolute -top-6 left-0"
-        >
-          <Image
-            src="/assets1/perfil6.png"
-            priority
-            quality={100}
-            fill
-            alt=""
-            className="object-contain rounded-full"
-          />
-        </motion.div>
+const badges = [
+  { icon: <FaReact />, label: "React", className: "left-2 top-8 sm:-left-6 xl:-left-10", delay: "0s" },
+  { icon: <SiNextdotjs />, label: "Next.js", className: "right-2 top-1/2 sm:-right-6 xl:-right-10", delay: "1.5s" },
+  { icon: <SiTailwindcss />, label: "Tailwind", className: "-bottom-3 left-8 md:left-4", delay: "3s" },
+];
 
-        {/* circle */}
-        <motion.svg
-          className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
-          fill="transparent"
-          viewBox="0 0 506 506"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <motion.circle
-            cx="253"
-            cy="253"
-            r="250"
-            stroke="#000000"
-            strokeWidth="4"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            initial={{ strokeDasharray: "24 10 0 0" }}
-            animate={{
-              strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
-              rotate: [120, 360],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-          />
-        </motion.svg>
-      </motion.div>
+const Photo = () => (
+  <motion.div
+    initial={{ opacity: 0, scale: 0.94 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+    className="relative mx-auto w-[280px] sm:w-[340px] xl:w-[420px]"
+  >
+    {/* resplandor */}
+    <div className="absolute -inset-6 rounded-[3rem] bg-white/10 blur-3xl" aria-hidden />
+
+    {/* marco desplazado */}
+    <div
+      className="absolute inset-0 translate-x-4 translate-y-4 rounded-[2rem] border border-accent/40"
+      aria-hidden
+    />
+
+    {/* foto */}
+    <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-white/10 bg-surface">
+      <Image
+        src="/assets1/alexisperfil.jpg"
+        alt="Alexis Lerch"
+        fill
+        priority
+        quality={90}
+        sizes="(max-width: 640px) 900px, 1400px"
+        className="object-cover object-[53%_30%]"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent" />
     </div>
-  );
-};
+
+    {/* insignias flotantes */}
+    {badges.map((badge) => (
+      <div
+        key={badge.label}
+        style={{ animationDelay: badge.delay }}
+        className={`absolute z-10 flex animate-float items-center gap-2 rounded-full border border-white/10 bg-surface/90 px-3 py-2 text-sm font-medium text-white shadow-xl backdrop-blur ${badge.className}`}
+      >
+        <span className="text-lg text-accent">{badge.icon}</span>
+        {badge.label}
+      </div>
+    ))}
+  </motion.div>
+);
 
 export default Photo;

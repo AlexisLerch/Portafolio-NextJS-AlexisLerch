@@ -1,24 +1,27 @@
-import Link from "next/link"
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
-import {FaGithub, FaLinkedinIn,} from 'react-icons/fa'
+import { profile } from "@/lib/data";
 
 const socials = [
-    {icon: <FaGithub />, path: 'https://github.com/AlexisLerch'},
-    {icon: <FaLinkedinIn />, path: 'https://www.linkedin.com/in/alexis-lerch-6a9ba1217/'},
-]
+  { icon: <FaGithub />, href: profile.github, label: "GitHub" },
+  { icon: <FaLinkedinIn />, href: profile.linkedin, label: "LinkedIn" },
+];
 
-const Social = ({containerStyles, iconStyles}) => {
-  return (
-    <div className={containerStyles}>
-        {socials.map((item, index) => {
-            return (
-            <Link target="_blank" key={index} href={item.path} className={iconStyles}>
-                {item.icon}
-            </Link>
-        );
-        })}
-    </div>
-  )
-}
+const Social = ({ className = "" }) => (
+  <div className={`flex gap-3 ${className}`}>
+    {socials.map((item) => (
+      <a
+        key={item.label}
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={item.label}
+        className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/[0.03] text-lg text-white/80 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/60 hover:bg-accent hover:text-primary"
+      >
+        {item.icon}
+      </a>
+    ))}
+  </div>
+);
 
-export default Social
+export default Social;

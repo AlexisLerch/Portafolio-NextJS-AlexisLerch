@@ -1,72 +1,46 @@
-"use client";
-
-import { BsArrowDownRight } from "react-icons/bs";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
-const services = [
-  {
-    num: '01',
-    title: 'Web Development',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reprehenderit tenetur.',
-    path: 'https://github.com/AlexisLerch'
-  },
-  {
-    num: '02',
-    title: 'UI/UX Design',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.',
-    path: 'https://github.com/AlexisLerch'
-  },
-  {
-    num: '03',
-    title: 'Logo Design',
-    description: 'Lorem ipsum dolor sit amet elit. Eaque reprehenderit placeat ipsam perferendis voluptates mollitia et tenetur.',
-    path: 'https://github.com/AlexisLerch'
-  },
-  {
-    num: '04',
-    title: 'SE0',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reprehenderit placeat ipsam perferendis voluptates mollitia et tenetur.',
-    path: 'https://github.com/AlexisLerch'
-  },
-];
+import SectionHeading from "@/components/SectionHeading";
+import Reveal from "@/components/Reveal";
+import { services } from "@/lib/data";
 
-import { motion } from "framer-motion";
+export const metadata = { title: "Servicios · Alexis Lerch" };
 
-const Services = () => {
-  return (
+const Services = () => (
+  <div className="container py-14 xl:py-20">
+    <SectionHeading
+      eyebrow="Servicios"
+      title="En qué te puedo ayudar"
+      description="Desde la idea hasta tener tu proyecto publicado y funcionando. Elegí lo que necesitás y lo hablamos."
+    />
 
-  <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
-    <h2 className="text-center pb-20 text-xl text-white/70">Esta seccion es solo de demostracion</h2>
-    <div className="container mx-auto">
-      <motion.div
-        initial={{opacity: 0}} 
-        animate={{
-          opacity: 1, 
-          transition: {delay: 0.5, duration: 0.4, ease: "easeIn"}}}
-        className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
-      >
-        {services.map((service, index) => {
-          return (
-            <div key={index} className="flex-1 flex flex-col justify-center gap-6 group">
-              {/* top */}
-              <div className="w-full flex justify-between items-center">
-                <div className="text-5xl font-extrabold text-outline  group-hover:text-black transition-all duration-500">{service.num}</div>
-                <Link target="_blank" href={`${service.path}`} className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-black text-3xl transition-all duration-500 flex justify-center items-center hover:-rotate-45">
-                  <BsArrowDownRight className="text-primary hover:text-white"/>
-                </Link>
+    <div className="mt-12 grid gap-6 md:grid-cols-2">
+      {services.map((service, index) => {
+        const Icon = service.icon;
+        return (
+          <Reveal key={service.num} delay={(index % 2) * 0.1}>
+            <Link
+              href={`/contact?servicio=${encodeURIComponent(service.title)}`}
+              className="card card-hover group relative block h-full overflow-hidden p-8"
+            >
+              <span className="absolute right-6 top-4 font-mono text-6xl font-bold text-outline opacity-40 transition-opacity duration-500 group-hover:opacity-100">
+                {service.num}
+              </span>
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10 text-accent transition-colors duration-300 group-hover:bg-accent group-hover:text-primary">
+                <Icon className="h-6 w-6" />
               </div>
-              {/* titulo */}
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-black transition-all duration-500 ">{service.title}</h2>
-              {/* descripcion */}
-              <p className="text-white/60">{service.description}</p>
-              <div className="border-b border-white/20 w-full"></div>
-            </div>
-          );
-        })}
-      </motion.div>
+              <h2 className="mt-8 font-mono text-2xl font-bold text-white">{service.title}</h2>
+              <p className="mt-3 max-w-md leading-relaxed text-white/60">{service.description}</p>
+              <span className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-white/80 transition-colors group-hover:text-accent">
+                Consultar <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </span>
+            </Link>
+          </Reveal>
+        );
+      })}
     </div>
-  </section>
-  );
-};
+  </div>
+);
 
-export default Services
+export default Services;

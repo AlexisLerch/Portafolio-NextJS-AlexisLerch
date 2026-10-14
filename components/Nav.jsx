@@ -2,48 +2,38 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { SheetClose } from "./ui/sheet";
+import { motion } from "framer-motion";
 
-const links = [
-    {
-        name: "inicio",
-        path: "/",
-    },
-    {
-        name: "proyectos",
-        path: "/work",
-    },
-    {
-        name: "resumen",
-        path: "/resume",
-    },
-    {
-        name: "servicios",
-        path: "/services",
-    },
-    {
-        name: "contacto",
-        path: "/contact",
-    },
-]
+import { navLinks } from "@/lib/data";
 
 const Nav = () => {
-    const pathname = usePathname();
-    console.log(pathname)
-    return (
-        <nav className="flex gap-8">
-            {links.map((link, index) => {
-                return (
-                    <Link href={link.path} key={index} className={`${link.path === pathname && "text-white border-b-2 font-extrabold border-white"}
-                    capitalize hover:text-black transition-all`}>
-                        
-                            {link.name}
-                        
-                    </Link>  
-                );
-            })}
-        </nav>
-    )
-}
+  const pathname = usePathname();
 
-export default Nav
+  return (
+    <nav className="flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.03] p-1">
+      {navLinks.map((link) => {
+        const active = link.path === pathname;
+        return (
+          <Link
+            key={link.path}
+            href={link.path}
+            className={`relative rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+              active ? "text-primary" : "text-white/65 hover:text-white"
+            }`}
+          >
+            {active && (
+              <motion.span
+                layoutId="nav-pill"
+                className="absolute inset-0 rounded-full bg-accent"
+                transition={{ type: "spring", stiffness: 380, damping: 32 }}
+              />
+            )}
+            <span className="relative z-10">{link.name}</span>
+          </Link>
+        );
+      })}
+    </nav>
+  );
+};
+
+export default Nav;

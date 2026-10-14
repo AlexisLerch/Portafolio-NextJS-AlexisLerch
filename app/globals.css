@@ -3,25 +3,56 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
   body {
-    @apply font-primary bg-primary text-white leading-loose;
+    @apply bg-primary font-sans text-white/90 antialiased;
   }
-  .h1 {
-    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+  ::selection {
+    @apply bg-accent text-primary;
   }
-  .h2 {
-    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
   }
-  .h3 {
-    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  ::-webkit-scrollbar {
+    width: 10px;
   }
-  .text-outline {
-    -webkit-text-stroke: 1px #ffffff;
+  ::-webkit-scrollbar-track {
+    background: #1c1c22;
   }
-  
-  .text-outline-hover {
-    -webkit-text-stroke: 1px #00ff99;
+  ::-webkit-scrollbar-thumb {
+    background: #2f2f38;
+    border-radius: 999px;
+    border: 2px solid #1c1c22;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3b3b46;
   }
 }
 
-
+@layer components {
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-accent;
+  }
+  .card {
+    @apply rounded-2xl border border-white/10 bg-surface/80 backdrop-blur-sm transition-colors duration-300;
+  }
+  .card-hover {
+    @apply hover:border-accent/40 hover:bg-surface;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-r from-white via-white to-zinc-500 bg-clip-text text-transparent;
+  }
+  .text-outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.35);
+  }
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 30%, transparent 100%);
+  }
+}

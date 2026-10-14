@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    darkMode: ["class"],
-    content: [
+  darkMode: ["class"],
+  content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,33 +9,40 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "15px",
+      padding: { DEFAULT: "1.25rem", md: "2rem" },
+      screens: { "2xl": "1200px" },
     },
-    screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '960px',
-      xl: '1200px',
-    },
-    fontFamily: {
-      primary: "var(--font-jetbrainsMono)",
-    },
-  	extend: {
-  		colors: {
-        primary: '#1c1c22',
-        accent: {
-          DEFAULT: '#00ff99',
-          hover: '#00e187',
+    extend: {
+      fontFamily: {
+        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+      },
+      colors: {
+        // paleta: fondo #1c1c22 + blanco suave como acento
+        primary: "#1c1c22",
+        surface: {
+          DEFAULT: "#23232a",
+          2: "#2b2b33",
         },
-  			background: 'var(--background)',
-  			foreground: 'var(--foreground)'
-  		},
-  		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
-  		}
-  	}
+        accent: {
+          DEFAULT: "#e4e4e9",
+          hover: "#ffffff",
+        },
+      },
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "spin-slow": {
+          to: { transform: "rotate(360deg)" },
+        },
+      },
+      animation: {
+        float: "float 6s ease-in-out infinite",
+        "spin-slow": "spin-slow 24s linear infinite",
+      },
+    },
   },
   plugins: [require("tailwindcss-animate")],
 };
